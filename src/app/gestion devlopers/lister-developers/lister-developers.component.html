@@ -1,0 +1,52 @@
+<div style="margin-left: 50%; margin-top: 30px; margin-bottom: 30px">
+  <h5>liste des devlopers</h5>
+</div>
+
+<div class="container">
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id devloper</th>
+            <th>lastNameDev</th>
+            <th>firstNameDev</th>
+            <th>mailDev</th>
+            <th>adresseDev</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let dev of devlopers">
+          <tr>
+            <td>{{ dev.idDev }}</td>
+            <td>{{ dev.lastNameDev }}</td>
+            <td>{{ dev.firstNameDev }}</td>
+            <td>{{ dev.mailDev }}</td>
+            <td>{{ dev.adressDev }}</td>
+            <td>
+              <a
+                class="btn btn-success"
+                [routerLink]="['/updateDevloper', dev.idDev]"
+                >Modifier</a
+              >
+            </td>
+            <td>
+              <a class="btn btn-danger" (click)="supprimerProduit(dev)"
+                >Supprimer</a
+              >
+            </td>
+            <td>
+              <a
+                class="btn btn-primary"
+                [routerLink]="['/detailDevloper', dev.idDev]"
+                >Details</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="btn btn-success" routerLink="/add-devlopers"
+        >ajouter devloper</a
+      >
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div style="margin-left: 50%; margin-top: 30px; margin-bottom: 30px">
+  <h5>liste des projects effectuer par le dévloppeurs</h5>
+</div>
+
+<div class="container">
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Libellé project</th>
+            <th>Lien</th>
+            <th>Prix</th>
+            <th>nom devloper</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let projet of projects">
+          <tr>
+            <td>{{ projet.idProj }}</td>
+            <td>{{ projet.nomProj }}</td>
+            <td>{{ projet.lienProj }}</td>
+            <td>{{ projet.prixProj }}</td>
+            <td>
+              {{
+                projet.devloper.firstNameDev + " " + projet.devloper.lastNameDev
+              }}
+            </td>
+            <td>
+              <a class="btn btn-danger">Supprimer</a>
+            </td>
+            <td>
+              <a
+                class="btn btn-success"
+                [routerLink]="['/updateProject', projet.idProj]"
+                >Modifier</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="btn btn-success" routerLink="/add-devlopers"
+        >ajouter devloper</a
+      >
+    </div>
+  </div>
+</div>

@@ -1,11 +1,11 @@
 <div class="container">
   <div>
-    <h2>Ajouter un devloper :</h2>
+    <h2>Ajouter un Devlopeur :</h2>
   </div>
 
   <form>
     <div class="col-sm-4 col-md-4 col-lg-4">
-      <label>prénom dévloper</label>
+      <label>prénom devlopeur</label>
       <input
         type="text"
         name="nomProj"
@@ -15,7 +15,7 @@
     </div>
 
     <div class="col-sm-2 col-md-2 col-lg-2">
-      <label>nom devloper</label>
+      <label>nom devlopeur</label>
       <input
         type="text"
         [(ngModel)]="d.firstNameDev"
@@ -24,7 +24,7 @@
       />
     </div>
     <div class="col-sm-2 col-md-2 col-lg-2">
-      <label>mail</label>
+      <label>mail devlopeur</label>
       <input
         type="text"
         [(ngModel)]="d.mailDev"
@@ -33,7 +33,7 @@
       />
     </div>
     <div class="col-sm-2 col-md-2 col-lg-2">
-      <label>adresse devlopper</label>
+      <label>adresse devlopeur</label>
       <input
         type="text"
         [(ngModel)]="d.adressDev"
@@ -43,7 +43,7 @@
     </div>
     <div class="mt-2">
       <button type="submit" (click)="addDevloper()" class="btn btn-success">
-        Ajouter
+        Ajouter un Devlopeur
       </button>
       <div>
         <h3>{{ message }}</h3>

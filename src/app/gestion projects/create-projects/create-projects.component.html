@@ -1,11 +1,11 @@
 <div class="container">
   <div>
-    <h2>Ajouter un project :</h2>
+    <h2>Ajouter un projet :</h2>
   </div>
 
   <form>
     <div class="col-sm-4 col-md-4 col-lg-4">
-      <label>Nom Project</label>
+      <label>libellé Projet</label>
       <input
         type="text"
         name="nomProj"
@@ -15,7 +15,7 @@
     </div>
 
     <div class="col-sm-2 col-md-2 col-lg-2">
-      <label>lien project</label>
+      <label>lien projet</label>
       <input
         type="text"
         [(ngModel)]="p.lienProj"
@@ -24,7 +24,7 @@
       />
     </div>
     <div class="col-sm-2 col-md-2 col-lg-2">
-      <label>Prix project</label>
+      <label>Prix projet</label>
       <input
         type="text"
         [(ngModel)]="p.prixProj"
@@ -33,7 +33,7 @@
       />
     </div>
     <div class="col-sm-2 col-md-2 col-lg-2">
-      <label>devloper</label>
+      <label>devlopeur</label>
       <select name="dev" [(ngModel)]="idDev">
         <option [value]="dev.idDev" *ngFor="let dev of devs">
           {{ dev.firstNameDev }} {{ dev.lastNameDev }}
@@ -42,7 +42,7 @@
     </div>
     <div class="mt-2">
       <button type="submit" (click)="addProject()" class="btn btn-success">
-        Ajouter
+        Ajouter projet
       </button>
       <div>
         <h3>{{ message }}</h3>
